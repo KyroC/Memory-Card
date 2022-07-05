@@ -16,7 +16,7 @@ const CardShuffler = () => {
                     "./images/tether-usdt-logo.png",
                     "./images/usd-coin-usdc-logo.png",
                     "./images/xrp-xrp-logo.png"]
-    const alts = ["avax","btc","bnb","ada","doge","eth","dot","sol","usdt","usdc","xrp"]
+    const alts = ["avax","btc","bnb","ada","doge","eth","dot","sol","luna","usdt","usdc","xrp"]
 
     useEffect(() => {
         console.log(selected);
@@ -64,7 +64,7 @@ const CardShuffler = () => {
     let dealCards = cards.map(item => <div class = "card" onClick={(e) => {shuffleCards(); addSelected(e)}} id={item}>
         <img src = {images[item]} alt={alts[item] }/><br></br>
         {alts[item]}
-        </div>)
+        </div>) 
     return (
         <div>
             <div id="currentScore">Current Score: {score}</div>
