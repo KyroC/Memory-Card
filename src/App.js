@@ -4,14 +4,9 @@ import CardShuffler from "./cardShuffler.js";
 
 
 const App = () => {
-  
-
-  
-
-  
-
   return (
     <div className="App">
+      <div className="title">Crypto logo's memory game</div>
       <CardShuffler />
     </div>
   );
