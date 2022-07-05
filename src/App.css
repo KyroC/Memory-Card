@@ -1,0 +1,6 @@
+
+#cardShuffler {
+  display:grid;
+  text-align:center;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+}
