@@ -62,7 +62,7 @@ const CardShuffler = () => {
         }
     }
     let dealCards = cards.map(item => <div class = "card" onClick={(e) => {shuffleCards(); addSelected(e)}} id={item}>
-        <img src = {images[item]} alt={alts[item] }/><br></br>
+        <img src = {images[item]} alt={alts[item] } onClick={(e) => {shuffleCards(); addSelected(e)}}/><br></br>
         {alts[item]}
         </div>) 
     return (
