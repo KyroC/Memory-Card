@@ -27,8 +27,8 @@ const CardShuffler = () => {
 
     const addSelected = (e) => {
         //if card has not been selected before
-        if (selected.includes(e.target.id) === false){
-          setSelected(oldSelected => [...oldSelected, e.target.id]);
+        if (selected.includes(e.target.className) === false){
+          setSelected(oldSelected => [...oldSelected, e.target.className]);
         }
         //if card has been selected
         else {
@@ -61,8 +61,8 @@ const CardShuffler = () => {
             setHighScore(finalHighScore);
         }
     }
-    let dealCards = cards.map(item => <div class = "card" onClick={(e) => {shuffleCards(); addSelected(e)}} id={item}>
-        <img src = {images[item]} alt={alts[item] } onClick={(e) => {shuffleCards(); addSelected(e)}}/><br></br>
+    let dealCards = cards.map(item => <div class = "card" onClick={(e) => {shuffleCards(); addSelected(e)}} className={item}>
+        <img src = {images[item]} alt={alts[item] } className={item}/><br></br>
         {alts[item]}
         </div>) 
     return (
